@@ -4,137 +4,148 @@ using UnityEngine;
 using Photon.Pun;
 using static InitManager;
 using static GameManager;
+using UnityEngine.UI;
+using System.Threading;
 using System.Threading.Tasks;
 
 public class PlayerController : MonoBehaviour
 {
     public int curPosX;  // 현재 플레이어의 X 좌표
     public int curPosY;  // 현재 플레이어의 Y 좌표
-    public GameObject targetPlanePrefab;  // 이동 목표 타일 프리팹
-    public GameObject targetPlane;  // 생성된 이동 목표 타일 오브젝트
+    public GameObject targetPlanePrefab;  // 타겟 위치 표시를 위한 평면 프리팹
+    public GameObject targetPlane;  // 타겟 위치 표시 객체
 
-    public Vector2 targetPos;  // 이동할 목표 위치의 2D 좌표
-    public int targetPosX;  // 목표 위치의 X 좌표
-    public int targetPosY;  // 목표 위치의 Y 좌표
-    public int myTurn;  // 플레이어의 턴 번호
-    private bool isMyTurnSelected = false;  // 내 턴이 설정되었는지 여부
-    PhotonView PV;  // 네트워크 동기화를 위한 PhotonView
-    public static PlayerController playerController;  // 싱글톤 패턴 객체
-    public Animator anim;  // 애니메이션 컨트롤러
+    public Vector2 targetPos;  // 타겟 위치
+    public int targetPosX;  // 타겟 X 좌표
+    public int targetPosY;  // 타겟 Y 좌표
+    public int myTurn;  // 현재 플레이어의 턴 번호
+    private bool isMyTurnSelected = false;  // 내 턴이 선택되었는지 확인하는 변수
+    PhotonView PV;  // PhotonView 객체
+    public static PlayerController playerController;  // PlayerController 싱글톤 객체
+    public Animator anim;  // 플레이어 애니메이터
 
     void Awake()
     {
-        PV = GetComponent<PhotonView>();  // PhotonView 초기화
-        playerController = GetComponent<PlayerController>();  // 싱글톤 인스턴스 설정
-        IM.PlayerControllerList.Add(this);  // InitManager에 플레이어 컨트롤러 등록
+        PV = GetComponent<PhotonView>();  // PhotonView 컴포넌트 초기화
+        playerController = GetComponent<PlayerController>();  // 싱글톤 객체 초기화
+        IM.PlayerControllerList.Add(this);  // InitManager에 플레이어 컨트롤러 추가
         anim = GetComponent<Animator>();  // Animator 컴포넌트 초기화
     }
 
-    // 목표 타일 초기화
+    // 타겟 평면을 초기화하는 함수
     public void InitTargetPlane()
     {
-        targetPlane = Instantiate(targetPlanePrefab, transform);  // 타일 생성
-        targetPlane.SetActive(false);  // 초기에는 비활성화
+        targetPlane = Instantiate(targetPlanePrefab, transform);  // 타겟 평면을 생성
+        targetPlane.SetActive(false);  // 처음에는 비활성화
     }
 
-    // 목표 타일을 현재 위치로 설정하고 표시
+    // 'Bulddeok' 액션을 시작하는 함수
     public void Bulddeok()
     {
-        targetPlane.SetActive(true);  // 목표 타일 활성화
-        targetPosX = curPosX;  // 목표 X 좌표를 현재 X로 설정
-        targetPosY = curPosY;  // 목표 Y 좌표를 현재 Y로 설정
-        targetPlane.transform.position = MapManager.MM.map_pos[targetPosX, targetPosY];  // 타일 위치 설정
+        targetPlane.SetActive(true);  // 타겟 평면을 활성화
+        targetPosX = curPosX;  // 타겟 X 좌표 초기화
+        targetPosY = curPosY;  // 타겟 Y 좌표 초기화
+        targetPlane.transform.position = MapManager.MM.map_pos[targetPosX, targetPosY];  // 타겟 평면 위치 설정
     }
 
-    // 현재 위치와 목표 위치 사이의 거리 계산 (맨해튼 거리)
+    // 현재 위치와 목표 위치 간의 거리를 계산하는 함수
     public int DistanceCheck()
     {
-        return Mathf.Abs(curPosX - targetPosX) + Mathf.Abs(curPosY - targetPosY);
+        return Mathf.Abs(curPosX - targetPosX) + Mathf.Abs(curPosY - targetPosY);  // X, Y 거리 차이의 합
     }
 
-    // 목표 좌표를 설정하는 메서드 (i 값에 따라 방향 결정)
+    // 목표 위치를 설정하는 함수
     public void SetTarget(int i)
     {
-        if (i == 0) targetPosX--;  // 위로 이동
-        if (i == 1) targetPosX++;  // 아래로 이동
-        if (i == 2) targetPosY--;  // 왼쪽으로 이동
-        if (i == 3) targetPosY++;  // 오른쪽으로 이동
+        // 타겟 위치 변경 (0: 왼쪽, 1: 오른쪽, 2: 아래, 3: 위)
+        if(i == 0) targetPosX--;
+        if(i == 1) targetPosX++;
+        if(i == 2) targetPosY--;
+        if(i == 3) targetPosY++;
 
-        // 이동 범위를 벗어나거나 거리 초과 시 좌표 복구
-        if (DistanceCheck() > 4 || targetPosX < 0 || targetPosX > 7 || targetPosY < 0 || targetPosY > 7)
+        // 이동 거리가 4 이상이거나, 맵 범위를 벗어나면 원위치
+        if(DistanceCheck() > 4 || targetPosX < 0 || targetPosX > 7 || targetPosY < 0 || targetPosY > 7)
         {
-            if (i == 0) targetPosX++;
-            if (i == 1) targetPosX--;
-            if (i == 2) targetPosY++;
-            if (i == 3) targetPosY--;
+            if(i == 0) targetPosX++;
+            if(i == 1) targetPosX--;
+            if(i == 2) targetPosY++;
+            if(i == 3) targetPosY--;
         }
         else
         {
-            // 범위를 벗어나지 않으면 목표 타일 위치 업데이트
-            targetPlane.transform.position = MapManager.MM.map_pos[targetPosX, targetPosY];
+            targetPlane.transform.position = MapManager.MM.map_pos[targetPosX, targetPosY];  // 타겟 평면 위치 갱신
         }
     }
 
-    // 비동기로 플레이어 이동
+    // 비동기로 이동하는 함수
     public async Task Move()
     {
-        targetPlane.SetActive(false);  // 목표 타일 비활성화
-        anim.SetInteger("state", 1);  // 이동 애니메이션 시작
+        targetPlane.SetActive(false);  // 타겟 평면 비활성화
+        anim.SetInteger("state", 1);  // 애니메이션 상태 변경
 
-        GameManager.GM.mine.transform.LookAt(MapManager.MM.map_pos[targetPosX, targetPosY]);  // 목표로 회전
-
-        // X 축 이동
-        while (true)
+        // 타겟 위치로 플레이어를 이동
+        GameManager.GM.mine.transform.LookAt(MapManager.MM.map_pos[targetPosX, targetPosY]);  // 목표를 향해 회전
+        while(true)
         {
-            if (transform.position == MapManager.MM.map_pos[targetPosX, curPosY])
+            if(transform.position == MapManager.MM.map_pos[targetPosX, curPosY])  // X 좌표에 도달하면
             {
-                curPosX = targetPosX;
-                break;  // 목표 X 좌표에 도달하면 탈출
+                Debug.Log("while 1 break");
+                curPosX = targetPosX;  // X 좌표 업데이트
+                break;
             }
-            transform.position = Vector3.MoveTowards(transform.position, MapManager.MM.map_pos[targetPosX, curPosY], 5f * Time.deltaTime);
-            await Task.Yield();  // 비동기 작업 대기
+                
+            transform.position = Vector3.MoveTowards(transform.position, MapManager.MM.map_pos[targetPosX, curPosY], 5f * Time.deltaTime);  // X 방향으로 이동
+            await Task.Yield();  // 비동기적으로 계속 대기
         }
 
-        // Y 축 이동
-        while (true)
+        GameManager.GM.mine.transform.LookAt(MapManager.MM.map_pos[targetPosX, targetPosY]);  // 목표를 향해 회전
+        while(true)
         {
-            if (transform.position == MapManager.MM.map_pos[targetPosX, targetPosY])
+            if(transform.position == MapManager.MM.map_pos[targetPosX, targetPosY])  // Y 좌표에 도달하면
             {
-                curPosY = targetPosY;
-                break;  // 목표 Y 좌표에 도달하면 탈출
+                Debug.Log("while 2 break");
+                curPosY = targetPosY;  // Y 좌표 업데이트
+                break;
             }
-            transform.position = Vector3.MoveTowards(transform.position, MapManager.MM.map_pos[targetPosX, targetPosY], 5f * Time.deltaTime);
-            await Task.Yield();
+                
+            transform.position = Vector3.MoveTowards(transform.position, MapManager.MM.map_pos[targetPosX, targetPosY], 5f * Time.deltaTime);  // Y 방향으로 이동
+            await Task.Yield();  // 비동기적으로 계속 대기
         }
 
-        Inventory.IM.GetItem(curPosX, curPosY);  // 아이템 획득 시도
-        anim.SetInteger("state", 0);  // 대기 상태로 전환
+        Inventory.IM.GetItem(curPosX, curPosY);  // 아이템 확인
+        anim.SetInteger("state", 0);  // 애니메이션 상태 초기화
     }
-
-    // 플레이어 턴 번호 설정 (한 번만 설정)
+    
+    // Photon RPC를 통해 턴 설정
     [PunRPC]
     void SetTurn(int turnNumber)
     {
-        if (!isMyTurnSelected)
+        if(isMyTurnSelected == false)
         {
-            myTurn = turnNumber;
-            isMyTurnSelected = true;
+            myTurn = turnNumber;  // 턴 번호 설정
+            isMyTurnSelected = true;  // 턴이 설정되었음을 표시
         }
     }
 
-    // 현재 턴이 내 턴인지 확인
+    // 내 턴을 확인하는 함수
     [PunRPC]
     public void CheckMyTurn()
     {
-        if (!PV.IsMine) return;  // 내 객체가 아니면 리턴
+        if(!PV.IsMine)  // PhotonView가 내 객체가 아니면 리턴
+            return;
+        
+        Debug.Log(GM.GetCurTurn() + " 현재 턴");
+        Debug.Log(gameObject.GetComponent<PlayerController>().myTurn + " 나의 턴");
 
-        if (myTurn == GM.GetCurTurn())  // 현재 턴이 내 턴이면
+        if(myTurn == GM.GetCurTurn())  // 현재 턴이 내 턴인지 확인
         {
-            UiManager.UM.MyTurnStart();  // 내 턴 UI 표시
+            Debug.Log("myTurn!");
+            UiManager.UM.MyTurnStart();  // 내 턴 시작
         }
         else
         {
-            UiManager.UM.OthersTurn();  // 상대 턴 UI 표시
+            Debug.Log("not my Turn");
+            UiManager.UM.OthersTurn();  // 다른 사람의 턴
         }
     }
 }

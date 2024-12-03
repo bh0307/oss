@@ -5,128 +5,100 @@ using Photon.Pun;
 
 public class MapManager : MonoBehaviour
 {
-    // 게임 맵의 8x8 크기 배열 (각 위치에 배치된 아이템 정보)
-    public int[,] map = new int[8, 8];
-    
-    // 각 맵 위치에 해당하는 월드 좌표 (Vector3 배열)
-    public Vector3[,] map_pos = new Vector3[8, 8];
-    
-    // 그린존을 표시하는 배열 (true: 그린존, false: 그린존 아님)
-    public bool[,] isGreenZone = new bool[8, 8];
-    
-    // 맵에 생성할 오브젝트의 갯수 (아이템 개수)
-    public int count = 10;
+    public int[,] map = new int[8, 8];      // 게임 맵에 배치된 아이템에 대한 정보를 저장하는 8x8 배열
+    public Vector3[,] map_pos = new Vector3[8, 8];  // 각 맵 위치에 대한 월드 좌표를 저장하는 8x8 배열
+    public bool[,] isGreenZone = new bool[8, 8];     // 각 위치가 GreenZone인지 아닌지를 저장하는 8x8 배열
+    public int count = 10;                  // 아이템을 생성할 횟수 (기본 10개)
 
-    // MapManager 클래스의 싱글톤 인스턴스
-    public static MapManager MM;
+    public static MapManager MM;            // MapManager 싱글톤 객체
+    PhotonView PV;                          // PhotonView 컴포넌트
 
-    // PhotonView 컴포넌트 참조 (네트워크 통신을 위해 사용)
-    PhotonView PV;
-
-    // Awake 함수: 스크립트가 처음 시작될 때 호출 (초기화)
+    // Awake: MapManager의 인스턴스를 싱글톤으로 설정하고, PhotonView 초기화
     void Awake()
     {
-        // MapManager 싱글톤 인스턴스 설정
-        MM = this;
-
-        // PhotonView 컴포넌트 가져오기 (네트워크 통신을 위해 필요)
-        PV = GetComponent<PhotonView>();
+        MM = this;  // 싱글톤 객체로 설정
+        PV = GetComponent<PhotonView>();  // PhotonView 컴포넌트 초기화
     }
 
-    // Start 함수: 게임 시작 시 한 번 호출
+    // Start: 맵 초기화 및 아이템 생성
     void Start()
     {
-        // 그린존 영역 설정
-        SetGreenZone();
-
-        // 만약 현재 플레이어가 마스터 클라이언트라면 아이템을 생성
-        if (PhotonNetwork.IsMasterClient)
+        SetGreenZone();  // GreenZone 설정
+        if (PhotonNetwork.IsMasterClient)  // 이 객체가 MasterClient인 경우에만 아이템을 생성
         {
-            // 설정된 count 수만큼 아이템을 생성
-            for (int i = 0; i < count; i++)
+            for (int i = 0; i < count; i++)     // count 수만큼 아이템을 생성
             {
-                Spawn();
+                Spawn();  // 아이템 생성
             }
         }
     }
 
-    // SetMapPos 함수: 맵의 각 위치에 해당하는 월드 좌표를 설정
+    // SetMapPos: 맵의 각 위치에 월드 좌표를 설정
     public void SetMapPos()
     {
-        // 8x8 맵에 대해 각 위치에 대한 월드 좌표 계산
         for (int i = 0; i < 8; i++)
         {
             for (int j = 0; j < 8; j++)
             {
-                // (i, j)에 해당하는 월드 좌표 계산 (X: 2*j, Z: -2*i, Y: 0)
+                // 각 맵 위치에 해당하는 월드 좌표 설정 (2 단위로 간격)
                 map_pos[i, j] = new Vector3(2 * j, 0, -2 * i);
             }
         }
     }
 
-    // SetGreenZone 함수: 그린존 영역을 설정
+    // SetGreenZone: 맵 내에 GreenZone을 설정 (1~6의 범위 내에 있는 곳을 GreenZone으로 설정)
     public void SetGreenZone()
     {
-        // 8x8 맵에 대해 그린존 영역을 설정
         for (int i = 0; i < 8; i++)
         {
             for (int j = 0; j < 8; j++)
             {
-                // (1,1)부터 (6,6)까지 범위는 그린존, 나머지는 그린존 아님
+                // 1 < i < 6 && 1 < j < 6이면 GreenZone 설정
                 if ((1 < i && i < 6) && (1 < j && j < 6))
                 {
-                    isGreenZone[i, j] = true;  // 그린존
+                    isGreenZone[i, j] = true;  // GreenZone
                 }
                 else
                 {
-                    isGreenZone[i, j] = false; // 그린존 아님
+                    isGreenZone[i, j] = false; // GreenZone 아님
                 }
             }
         }
     }
 
-    // SetMapItem 함수: 네트워크에서 아이템을 설정하는 RPC 함수
+    // SetMapItem: 특정 위치에 아이템을 설정 (Photon RPC)
     [PunRPC]
     public void SetMapItem(int posX, int posY, int item)
     {
-        // 해당 위치에 아이템을 설정
-        map[posX, posY] = item;
-        // 콘솔에 위치 출력
-        Debug.Log(posX + " " + posY);
+        map[posX, posY] = item;  // 해당 위치에 아이템 번호 저장
+        Debug.Log(posX + " " + posY);  // 디버깅 로그
     }
 
-    // RPC_SetMapItem 함수: 네트워크 상의 모든 클라이언트에서 SetMapItem 호출
+    // RPC_SetMapItem: Photon RPC를 통해 SetMapItem을 호출
     public void RPC_SetMapItem(int posX, int posY, int item)
     {
-        // 모든 클라이언트에서 SetMapItem을 호출하는 RPC
-        PV.RPC("SetMapItem", RpcTarget.All, posX, posY, item);
-        // 콘솔에 위치 출력
-        Debug.Log(posX + " " + posY);
+        PV.RPC("SetMapItem", RpcTarget.All, posX, posY, item);  // 모든 클라이언트에 SetMapItem 호출
+        Debug.Log(posX + " " + posY);  // 디버깅 로그
     }
 
-    // Spawn 함수: 아이템을 랜덤한 위치에 생성하는 함수
+    // Spawn: 맵에 아이템을 랜덤하게 생성하는 함수
     private void Spawn()
     {
         int posX;
         int posY;
         int selection;
 
-        // 아이템을 배치할 수 있는 빈 위치를 찾을 때까지 반복
         while (true)
         {
-            // 랜덤한 맵 좌표 선택 (0~7 범위)
-            posX = Random.Range(0, 8);
-            posY = Random.Range(0, 8);
+            posX = Random.Range(0, 8);  // 0부터 7까지 랜덤 X 좌표 선택
+            posY = Random.Range(0, 8);  // 0부터 7까지 랜덤 Y 좌표 선택
 
-            // 해당 위치가 비어 있고, 그린존이 아니면 아이템을 배치
-            if (map[posX, posY] == 0 && !isGreenZone[posX, posY])
+            // 해당 위치가 비어 있고 GreenZone이 아닌 경우에만 아이템을 생성
+            if (map[posX, posY] == 0 && !isGreenZone[posX, posY])   
             {
-                // 1부터 6까지 랜덤한 아이템 선택
-                selection = Random.Range(1, 7);
-
-                // 네트워크를 통해 모든 클라이언트에 아이템 배치 정보 전달
-                PV.RPC("SetMapItem", RpcTarget.All, posX, posY, selection);
-                break; // 아이템을 생성했으므로 반복문 종료
+                selection = Random.Range(1, 7);  // 아이템 종류를 1부터 6까지 랜덤 선택
+                PV.RPC("SetMapItem", RpcTarget.All, posX, posY, selection);  // 모든 클라이언트에 아이템 위치 정보 전송
+                break;  // 아이템을 한 번 생성하면 루프 종료
             }
         }
     }
