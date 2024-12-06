@@ -60,70 +60,54 @@ public class Inventory : MonoBehaviour
         SceneManager.LoadScene(0);  // 게임을 종료하고 첫 번째 씬(메인 메뉴)으로 로드
     }
 
-    // 종료 조건을 체크하는 함수 (특정 위치에서 필요한 아이템을 갖고 있는지 확인)public class Inventory : MonoBehaviour
-{
-    // ... 기존 코드 ...
-
-    // 종료 조건을 체크하는 함수
+    // 종료 조건을 체크하는 함수 (특정 위치에서 필요한 아이템을 갖고 있는지 확인)
     public void EndingCheck(int curPosX, int curPosY)
     {
-        // 각 지역에 대한 종료 조건 체크
-        switch ((curPosX, curPosY))
+        if (curPosX == 0 && curPosY == 0)
         {
-            case (0, 0):
-                Debug.Log("0,0 위치에서 아이템 체크");
-                if (itemArr[0] == ItemType.Hammer || itemArr[1] == ItemType.Hammer)
-                {
-                    Debug.Log("망치가 있어 게임 종료");
-                    PV.RPC("End", RpcTarget.All);  // 망치가 있으면 게임 종료
-                }
-                else
-                {
-                    UiManager.UM.SetNotice("망치를 가져와야할것 같다.");
-                }
-                break;
-
-            case (7, 0):
-                Debug.Log("7,0 위치에서 아이템 체크");
-                if (itemArr[0] == ItemType.Pickax || itemArr[1] == ItemType.Pickax)
-                {
-                    Debug.Log("곡괭이가 있어 게임 종료");
-                    PV.RPC("End", RpcTarget.All);  // 곡괭이가 있으면 게임 종료
-                }
-                else
-                {
-                    UiManager.UM.SetNotice("곡괭이를 가져와야할것 같다.");
-                }
-                break;
-
-            case (0, 7):
-                Debug.Log("0,7 위치에서 아이템 체크");
-                if (itemArr[0] == ItemType.Sickle || itemArr[1] == ItemType.Sickle)
-                {
-                    Debug.Log("낫이 있어 게임 종료");
-                    PV.RPC("End", RpcTarget.All);  // 낫이 있으면 게임 종료
-                }
-                else
-                {
-                    UiManager.UM.SetNotice("낫을 가져와야할것 같다.");
-                }
-                break;
-
-            case (7, 7):
-                Debug.Log("7,7 위치에서 아이템 체크");
-                if (itemArr[0] == ItemType.Shovels || itemArr[1] == ItemType.Shovels)
-                {
-                    Debug.Log("삽이 있어 게임 종료");
-                    PV.RPC("End", RpcTarget.All);  // 삽이 있으면 게임 종료
-                }
-                else
-                {
-                    UiManager.UM.SetNotice("삽을 가져와야할것 같다.");
-                }
-                break;
+            if (itemArr[0] == ItemType.Hammer || itemArr[1] == ItemType.Hammer)
+            {
+                PV.RPC("End", RpcTarget.All);  // 망치가 있으면 게임 종료
+            }
+            else
+            {
+                UiManager.UM.SetNotice("망치를 가져와야할것 같다.");
+            }
+        }
+        if (curPosX == 7 && curPosY == 0)
+        {
+            if (itemArr[0] == ItemType.Pickax || itemArr[1] == ItemType.Pickax)
+            {
+                PV.RPC("End", RpcTarget.All);  // 곡괭이가 있으면 게임 종료
+            }
+            else
+            {
+                UiManager.UM.SetNotice("곡괭이를 가져와야할것 같다.");
+            }
+        }
+        if (curPosX == 0 && curPosY == 7)
+        {
+            if (itemArr[0] == ItemType.Sickle || itemArr[1] == ItemType.Sickle)
+            {
+                PV.RPC("End", RpcTarget.All);  // 낫이 있으면 게임 종료
+            }
+            else
+            {
+                UiManager.UM.SetNotice("낫을 가져와야할것 같다.");
+            }
+        }
+        if (curPosX == 7 && curPosY == 7)
+        {
+            if (itemArr[0] == ItemType.Shovels || itemArr[1] == ItemType.Shovels)
+            {
+                PV.RPC("End", RpcTarget.All);  // 삽이 있으면 게임 종료
+            }
+            else
+            {
+                UiManager.UM.SetNotice("삽을 가져와야할것 같다.");
+            }
         }
     }
-
 
     // 아이템 조합을 시도하는 함수
     public void MixItem()
@@ -206,15 +190,4 @@ public class Inventory : MonoBehaviour
         itemArr[i] = item;  // 인벤토리 배열을 업데이트
         itemSlot[i].GetComponent<Image>().sprite = ItemContainor.IC.itemImg[(int)item];  // UI 이미지 업데이트
     }
-}
-
-
-  [PunRPC]
-    void End()
-    {
-        Debug.Log("게임 종료");
-        SceneManager.LoadScene(0);  // 게임을 종료하고 첫 번째 씬(메인 메뉴)으로 로드
-    }
-
-
 }
