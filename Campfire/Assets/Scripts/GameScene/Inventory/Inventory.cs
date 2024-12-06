@@ -102,6 +102,7 @@ public class Inventory : MonoBehaviour
             {
                 PV.RPC("End", RpcTarget.All);  // 삽이 있으면 게임 종료
             }
+            
             else
             {
                 UiManager.UM.SetNotice("삽을 가져와야할것 같다.");
