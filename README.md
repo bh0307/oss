@@ -60,4 +60,4 @@ This is a **2-4 player board game**, where the player who collects items and esc
   Create different modes where players' views are restricted, preventing them from knowing others' actions.  
 - 맵의 크기나 제한 시간을 방장이 마음대로 조정할 수 있는 설정 칸 추가  
   Add a settings option allowing the host to adjust the map size and time limit freely.
->>>>>>> cdf589a798683ed10d33f274ee2bd69a9e23d830
+
