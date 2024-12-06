@@ -1,6 +1,4 @@
 # 캠프파이어 보드게임 / Campfire Board Game
-
-<<<<<<< HEAD
 ## 1. 게임 소개 / Game Introduction
 이 게임은 **2~4인 보드게임**으로, 아이템을 모아서 맵을 가장 먼저 탈출하는 사람이 이기는 게임입니다.  
 This is a **2-4 player board game**, where the player who collects items and escapes the map first wins the game.
