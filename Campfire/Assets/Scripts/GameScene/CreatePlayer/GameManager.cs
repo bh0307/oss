@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
     public void NewTurnStart()
     {
         curTurn = (curTurn + 1) % playerCount;  // 턴을 다음 플레이어로 변경, 플레이어 수에 맞춰 순환
-        UiManager.UM.LImitTime = 10f;  // 시간 제한을 10초로 초기화
+        UiManager.UM.LImitTime = 20f;  // 시간 제한을 10초로 초기화
         Inventory.IM.itemSlot[0].interactable = false;  // 아이템 슬롯 버튼 비활성화
         Inventory.IM.itemSlot[1].interactable = false;  // 아이템 슬롯 버튼 비활성화
         HeartManager.HM.HeartMove();  // 심장(체력) 상태를 갱신
