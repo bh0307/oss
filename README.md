@@ -103,9 +103,10 @@ This is a **2-4 player board game**, where the player who collects items and esc
 방 찾기를 누르면 이제 만들어진 방들을 볼 수 있습니다.
 ![image](https://github.com/user-attachments/assets/72f7ccde-7acf-4227-9639-af7f8e600f03)
 
-create room을 누르면 방을 만들 수 있습니다.
+누군가가 방을 만들면 그 방이 보이고 몇명이 있는지도 볼 수 있습니다.
 ![image](https://github.com/user-attachments/assets/e8b3783b-b987-4ee9-be09-dbbf46302717)
 
+create room을 누르면 방을 만들 수 있습니다.
 ![image](https://github.com/user-attachments/assets/c32aa391-cdd0-47ce-af06-d69c3ddc8c7e)
 
 ![image](https://github.com/user-attachments/assets/1d1d2431-dcc0-4227-8d11-5ee19d84e87e)
