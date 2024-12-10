@@ -19,7 +19,7 @@ public class Ending : MonoBehaviour
 
     void Update()
     {
-        // 필요 시 업데이트 코드 추가 가능 (현재는 비어 있음)
+        // 필요 시 업데이트 코드 추가 가능 (현재는 비어  있음)
     }
 
     // 특정 좌표(posX, posY)에서 엔딩 조건을 확인하는 메서드
