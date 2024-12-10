@@ -1,7 +1,12 @@
 # 캠프파이어 보드게임 / Campfire Board Game
+
+
 ## 1. 게임 소개 / Game Introduction
 이 게임은 **2~4인 보드게임**으로, 아이템을 모아서 맵을 가장 먼저 탈출하는 사람이 이기는 게임입니다.  
 This is a **2-4 player board game**, where the player who collects items and escapes the map first wins the game.
+
+🛠️ Unity 기반 멀티플레이어 게임 프로젝트
+이 프로젝트는 Unity와 Photon PUN을 활용하여 멀티플레이어 환경에서 아이템을 획득, 조합, 버리는 기능을 구현한 게임입니다.
 
 ## 2. 게임 룰 / Game Rules
 - 맵은 총 **4x4**로 되어 있으며, **가운데**에 캠프파이어가 위치해 있습니다.  
@@ -58,4 +63,38 @@ This is a **2-4 player board game**, where the player who collects items and esc
   Create different modes where players' views are restricted, preventing them from knowing others' actions.  
 - 맵의 크기나 제한 시간을 방장이 마음대로 조정할 수 있는 설정 칸 추가  
   Add a settings option allowing the host to adjust the map size and time limit freely.
+
+
+
+
+## 5. 📋 주요 기능
+-아이템 획득: 맵에서 아이템을 찾아 인벤토리에 추가할 수 있습니다.
+-아이템 조합: 특정 아이템들을 조합하여 새로운 아이템을 생성할 수 있습니다.
+-아이템 버리기: 필요하지 않은 아이템을 인벤토리에서 제거할 수 있습니다.
+-멀티플레이어 지원: Photon PUN을 통해 여러 플레이어와 함께 게임을 즐길 수 있습니다.
+## 6.🗂️ 코드 구성
+-Inventory.cs: 아이템의 획득, 조합, 버리기 등의 인벤토리 관련 기능을 관리합니다.
+-MapManager.cs: 맵의 아이템 배치와 관련된 기능을 담당합니다.
+-Ending.cs: 게임 종료 조건을 확인하고 처리합니다.
+-UiManager.cs: 사용자 인터페이스의 알림 및 업데이트를 관리합니다.
+-ItemContainor.cs: 아이템 이미지와 관련된 데이터를 보관합니다.
+## 7.🔧 사용 기술
+-Unity: 게임 개발 엔진으로, 2D 및 3D 게임 개발에 사용되었습니다.
+-Photon PUN: 실시간 멀티플레이어 기능 구현을 위해 사용되었습니다.
+-C#: 게임 로직과 시스템 구현에 사용되었습니다.
+##8 .🚀 시작하기
+
+프로젝트 클론:
+
+bash
+
+코드 복사
+
+git clone https://github.com/사용자명/프로젝트명.git
+
+Unity에서 프로젝트 열기: Unity 허브를 통해 클론한 프로젝트를 엽니다.
+
+필요한 패키지 설치: Photon PUN 등 필요한 패키지를 설치합니다.
+
+게임 실행: Unity 에디터에서 게임을 실행하여 기능을 확인합니다.
 
