@@ -126,7 +126,7 @@ create room을 누르면 방을 만들 수 있습니다.
 ![image](https://github.com/user-attachments/assets/20d09673-531c-418a-96ba-e90beff08b6c)
 화살표를 눌러 자기가 이동하고자 하는 곳을 타일을 통해 볼 수 있습니다.
 ![image](https://github.com/user-attachments/assets/58415de2-8b0e-4eb3-813c-23c0eb3d3061)
-
+이동후 아이템을 얻으면 아이템을 얻었다는 공지가 뜨고 오른쪽 인벤토리 칸에 어떤 아이템을 얻었는지 공지가 뜹니다.
 ![image](https://github.com/user-attachments/assets/10012472-1955-421a-a105-ec0fa12cfa90)
 
 ![image](https://github.com/user-attachments/assets/75357961-2653-43f0-9061-288227742689)
@@ -142,7 +142,7 @@ create room을 누르면 방을 만들 수 있습니다.
 ![image](https://github.com/user-attachments/assets/64a48d84-91f5-490b-8cf3-a461e82d6625)
 
 ![image](https://github.com/user-attachments/assets/af81e5dd-af29-4a68-a1e7-e1477a117d3c)
-
+이제 가지고 있는 아이템을 가지고 특정 지역으로 가면 게임이 끝났다는 공지가 올라오고 게임이 끝납니다.
 ![image](https://github.com/user-attachments/assets/86e6a3ef-f3ad-4a17-83ef-9260329f4ae5)
 
 ![image](https://github.com/user-attachments/assets/e6dd22e7-d083-4c8b-9481-437736836f01)
