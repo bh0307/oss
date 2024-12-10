@@ -91,10 +91,13 @@ This is a **2-4 player board game**, where the player who collects items and esc
 
 -C#: 게임 로직과 시스템 구현에 사용되었습니다.
 
-##8 .🚀 시작하기
 
+## 8 .🚀 시작하기
+
+게임 시작을 누르면 로비씬으로 이동합니다.
 ![image](https://github.com/user-attachments/assets/6253b407-b774-4a1c-8f8f-856f7ce80605)
 
+로비씬에서는 방 만들기를 누르면 방을 만들 수 있습니다.
 ![image](https://github.com/user-attachments/assets/61003dd0-e5db-4389-87b9-c18d8f1650e2)
 
 ![image](https://github.com/user-attachments/assets/72f7ccde-7acf-4227-9639-af7f8e600f03)
