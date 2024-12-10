@@ -44,11 +44,9 @@ This is a **2-4 player board game**, where the player who collects items and esc
 - 서버의 경우 포톤을 사용하여 EC 동아리 서버에 연결했습니다.  
   For the server, Photon was used to connect to the EC club server.
   
-- 자세한 건 개발 일지 참고.  
+- 자세한 건 개발 일지 참고(readme파일 밑에 있습니다.).  
   Refer to the development log for more details.
   
-### Full Logs
-- For detailed logs, refer to [김병호 개발일지](path_to_uploaded_file/김병호_개발일지.docx).
 
 
 ## 4. 앞으로 더 개발하는 점 / Future Development  
