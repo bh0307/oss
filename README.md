@@ -47,10 +47,6 @@ This is a **2-4 player board game**, where the player who collects items and esc
 - 자세한 건 개발 일지 참고(readme파일 밑에 있습니다.).  
   Refer to the development log for more details.
   
-[이미지 설명](https://user-images.githubusercontent.com/12345678/sample-image.png)
-
-  
-
 
 ## 4. 앞으로 더 개발하는 점 / Future Development  
 - AI를 탐재하여 혼자 플레이해도 AI와 같이 게임이 가능하게 만들기  
@@ -63,6 +59,7 @@ This is a **2-4 player board game**, where the player who collects items and esc
   Add a settings option allowing the host to adjust the map size and time limit freely.
 
 
+![image](https://github.com/user-attachments/assets/2834190f-68a7-436e-9e4f-437adc3edb80)
 
 
 ## 5. 📋 주요 기능
