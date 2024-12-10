@@ -142,7 +142,7 @@ create room을 누르면 방을 만들 수 있습니다.
 ![image](https://github.com/user-attachments/assets/64a48d84-91f5-490b-8cf3-a461e82d6625)
 만약 하트가 없으면 초록 존으로 다시 돌아와서 하트를 채워야합니다. 하트는 1턴당 1개씩 찹니다.
 ![image](https://github.com/user-attachments/assets/af81e5dd-af29-4a68-a1e7-e1477a117d3c)
-
+계속해서 게임을 플레이하다보면 다른 아이템을 얻고 조합을 해서 조합 아이템을 만들 수 있습니다.
 ![image](https://github.com/user-attachments/assets/86e6a3ef-f3ad-4a17-83ef-9260329f4ae5)
 이제 가지고 있는 아이템을 가지고 특정 지역으로 가면 게임이 끝났다는 공지가 올라오고 게임이 끝납니다.
 ![image](https://github.com/user-attachments/assets/e6dd22e7-d083-4c8b-9481-437736836f01)
