@@ -124,7 +124,7 @@ create room을 누르면 방을 만들 수 있습니다.
 
 다른 사람의 차례에는 다른 사람의 차례라고 공지가 뜨고 이때는 아무것도 할 수 없습니다.
 ![image](https://github.com/user-attachments/assets/20d09673-531c-418a-96ba-e90beff08b6c)
-
+화살표를 눌러 자기가 이동하고자 하는 곳을 타일을 통해 볼 수 있습니다.
 ![image](https://github.com/user-attachments/assets/58415de2-8b0e-4eb3-813c-23c0eb3d3061)
 
 ![image](https://github.com/user-attachments/assets/10012472-1955-421a-a105-ec0fa12cfa90)
