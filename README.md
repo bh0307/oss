@@ -118,8 +118,11 @@ create room을 누르면 방을 만들 수 있습니다.
 제한시간 내에 무엇을 할지 정하고 검은 색 지역으로 가서 아이템을 찾습니다.
 ![image](https://github.com/user-attachments/assets/bfac0ad3-42f5-4e2d-9de8-e61610178e06)
 
+원하는 곳으로 가서 아이템을 찾습니다. 만약 그 구역에 없으면 없다는 알림이 뜹니다.
+검은색 지역으로 가면 하트가 하나씩 떨어집니다. 하트는 최대 4개까지 가질 수 있습니다.
 ![image](https://github.com/user-attachments/assets/c653c262-601b-4863-8fc1-8de833f42520)
 
+다른 사람의 차례에는 다른 사람의 차례라고 공지가 뜨고 이때는 아무것도 할 수 없습니다.
 ![image](https://github.com/user-attachments/assets/20d09673-531c-418a-96ba-e90beff08b6c)
 
 ![image](https://github.com/user-attachments/assets/58415de2-8b0e-4eb3-813c-23c0eb3d3061)
