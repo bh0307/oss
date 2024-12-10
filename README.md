@@ -133,7 +133,8 @@ This is a **2-4 player board game**, where the player who collects items and esc
 
 ![image](https://github.com/user-attachments/assets/86e6a3ef-f3ad-4a17-83ef-9260329f4ae5)
 
-![image](https://github.com/user-attachments/assets/b0d68c5f-253d-4c65-b0a1-d7660eec5698)
+![image](https://github.com/user-attachments/assets/e6dd22e7-d083-4c8b-9481-437736836f01)
+
 
 
 
