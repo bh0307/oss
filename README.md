@@ -109,8 +109,10 @@ This is a **2-4 player board game**, where the player who collects items and esc
 create room을 누르면 방을 만들 수 있습니다.
 ![image](https://github.com/user-attachments/assets/c32aa391-cdd0-47ce-af06-d69c3ddc8c7e)
 
+사람이 들어오고 start를 누르면 게임이 시작되고 leave를 누르면 방에서 나갈 수 있습니다.
 ![image](https://github.com/user-attachments/assets/1d1d2431-dcc0-4227-8d11-5ee19d84e87e)
 
+게임이 시작되면 플레이어는 초록색 존에서 랜덤한 위치에 리스폰 됩니다.
 ![image](https://github.com/user-attachments/assets/2eec3d46-1428-4aa8-8e17-755ce34206f7)
 
 ![image](https://github.com/user-attachments/assets/bfac0ad3-42f5-4e2d-9de8-e61610178e06)
