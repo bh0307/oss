@@ -80,6 +80,9 @@ This is a **2-4 player board game**, where the player who collects items and esc
 
 -ItemContainor.cs: 아이템 이미지와 관련된 데이터를 보관합니다.
 
+### Full Logs
+- For detailed logs, refer to [김병호 개발일지](path_to_uploaded_file/김병호_개발일지.docx).
+
 ## 7.🔧 사용 기술
 -Unity: 게임 개발 엔진으로, 2D 및 3D 게임 개발에 사용되었습니다.
 
