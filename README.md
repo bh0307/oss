@@ -73,6 +73,8 @@ This is a **2-4 player board game**, where the player who collects items and esc
 
 ## 6.🗂️ 코드 구성
 -Inventory.cs: 아이템의 획득, 조합, 버리기 등의 인벤토리 관련 기능을 관리합니다.
+![image](https://github.com/user-attachments/assets/b12c0af3-1c18-4dff-9529-419200a607e0)
+
 
 -MapManager.cs: 맵의 아이템 배치와 관련된 기능을 담당합니다.
 
@@ -90,5 +92,61 @@ This is a **2-4 player board game**, where the player who collects items and esc
 -C#: 게임 로직과 시스템 구현에 사용되었습니다.
 
 ##8 .🚀 시작하기
+
+![image](https://github.com/user-attachments/assets/6253b407-b774-4a1c-8f8f-856f7ce80605)
+
+![image](https://github.com/user-attachments/assets/61003dd0-e5db-4389-87b9-c18d8f1650e2)
+
+![image](https://github.com/user-attachments/assets/72f7ccde-7acf-4227-9639-af7f8e600f03)
+
+![image](https://github.com/user-attachments/assets/e8b3783b-b987-4ee9-be09-dbbf46302717)
+
+![image](https://github.com/user-attachments/assets/c32aa391-cdd0-47ce-af06-d69c3ddc8c7e)
+
+![image](https://github.com/user-attachments/assets/1d1d2431-dcc0-4227-8d11-5ee19d84e87e)
+
+![image](https://github.com/user-attachments/assets/2eec3d46-1428-4aa8-8e17-755ce34206f7)
+
+![image](https://github.com/user-attachments/assets/bfac0ad3-42f5-4e2d-9de8-e61610178e06)
+
+![image](https://github.com/user-attachments/assets/c653c262-601b-4863-8fc1-8de833f42520)
+
+![image](https://github.com/user-attachments/assets/20d09673-531c-418a-96ba-e90beff08b6c)
+
+![image](https://github.com/user-attachments/assets/58415de2-8b0e-4eb3-813c-23c0eb3d3061)
+
+![image](https://github.com/user-attachments/assets/10012472-1955-421a-a105-ec0fa12cfa90)
+
+![image](https://github.com/user-attachments/assets/75357961-2653-43f0-9061-288227742689)
+
+![image](https://github.com/user-attachments/assets/4e2426a1-6ab7-4b40-8fb3-7d6685290471)
+
+![image](https://github.com/user-attachments/assets/0465f517-2e1f-4561-8718-b730d301aa71)
+
+![image](https://github.com/user-attachments/assets/8095b085-199d-4bb3-8fa9-5a59df4b6a56)
+
+![image](https://github.com/user-attachments/assets/a841194e-2793-4a5b-a1db-f2ee4d552d5c)
+
+![image](https://github.com/user-attachments/assets/64a48d84-91f5-490b-8cf3-a461e82d6625)
+
+![image](https://github.com/user-attachments/assets/af81e5dd-af29-4a68-a1e7-e1477a117d3c)
+
+![image](https://github.com/user-attachments/assets/86e6a3ef-f3ad-4a17-83ef-9260329f4ae5)
+
+![image](https://github.com/user-attachments/assets/b0d68c5f-253d-4c65-b0a1-d7660eec5698)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
