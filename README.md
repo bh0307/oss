@@ -95,56 +95,89 @@ This is a **2-4 player board game**, where the player who collects items and esc
 ## 8 .🚀 시작하기
 
 게임 시작을 누르면 로비씬으로 이동합니다.
+When you press "Start Game," you will move to the lobby scene.
 ![image](https://github.com/user-attachments/assets/6253b407-b774-4a1c-8f8f-856f7ce80605)
 
 로비씬에서는 방 찾기를 누르면 방을 찾을 수 있습니다.
+In the lobby scene, you can press "Find Room" to search for rooms.
 ![image](https://github.com/user-attachments/assets/61003dd0-e5db-4389-87b9-c18d8f1650e2)
 
 방 찾기를 누르면 이제 만들어진 방들을 볼 수 있습니다.
+When you press "Find Room," you can see the rooms that have been created.
 ![image](https://github.com/user-attachments/assets/72f7ccde-7acf-4227-9639-af7f8e600f03)
 
-누군가가 방을 만들면 그 방이 보이고 몇명이 있는지도 볼 수 있습니다.
+누군가가 방을 만들면 그 방이 보이고 몇 명이 있는지도 볼 수 있습니다.
+If someone creates a room, you can see that room and the number of participants.
 ![image](https://github.com/user-attachments/assets/e8b3783b-b987-4ee9-be09-dbbf46302717)
 
 create room을 누르면 방을 만들 수 있습니다.
+You can press "Create Room" to create a new room.
 ![image](https://github.com/user-attachments/assets/c32aa391-cdd0-47ce-af06-d69c3ddc8c7e)
 
 사람이 들어오고 start를 누르면 게임이 시작되고 leave를 누르면 방에서 나갈 수 있습니다.
+When someone joins, pressing "Start" begins the game, and pressing "Leave" exits the room.
 ![image](https://github.com/user-attachments/assets/1d1d2431-dcc0-4227-8d11-5ee19d84e87e)
 
 게임이 시작되면 플레이어는 초록색 존에서 랜덤한 위치에 리스폰 됩니다.
+When the game starts, players respawn at random locations in the green zone.
 ![image](https://github.com/user-attachments/assets/2eec3d46-1428-4aa8-8e17-755ce34206f7)
 
-제한시간 내에 무엇을 할지 정하고 검은 색 지역으로 가서 아이템을 찾습니다.
+제한시간 내에 무엇을 할지 정하고 검은색 지역으로 가서 아이템을 찾습니다.
+Decide what to do within the time limit and move to the black zone to find items.
 ![image](https://github.com/user-attachments/assets/bfac0ad3-42f5-4e2d-9de8-e61610178e06)
 
-원하는 곳으로 가서 아이템을 찾습니다. 만약 그 구역에 없으면 없다는 알림이 뜹니다.
+원하는 곳으로 가서 아이템을 찾습니다. 만약 그 구역에 없으면 없다는 알림이 뜹니다. 
 검은색 지역으로 가면 하트가 하나씩 떨어집니다. 하트는 최대 4개까지 가질 수 있습니다.
+Go to the desired location to find items. If the item is not there, a notification will appear. 
+In the black zone, hearts decrease one by one, and you can have up to four hearts.
 ![image](https://github.com/user-attachments/assets/c653c262-601b-4863-8fc1-8de833f42520)
 
 다른 사람의 차례에는 다른 사람의 차례라고 공지가 뜨고 이때는 아무것도 할 수 없습니다.
+During another player’s turn, a notification appears saying it’s their turn, and you cannot take any actions.
 ![image](https://github.com/user-attachments/assets/20d09673-531c-418a-96ba-e90beff08b6c)
+
 화살표를 눌러 자기가 이동하고자 하는 곳을 타일을 통해 볼 수 있습니다.
+Press the arrow keys to see the tiles of your desired movement path.
 ![image](https://github.com/user-attachments/assets/58415de2-8b0e-4eb3-813c-23c0eb3d3061)
-이동후 아이템을 얻으면 아이템을 얻었다는 공지가 뜨고 오른쪽 인벤토리 칸에 어떤 아이템을 얻었는지 공지가 뜹니다.
+
+이동 후 아이템을 얻으면 아이템을 얻었다는 공지가 뜨고 오른쪽 인벤토리 칸에 어떤 아이템을 얻었는지 공지가 뜹니다.
+After moving, if you obtain an item, a notification will display that you’ve acquired it, and it will appear in the right inventory slot.
 ![image](https://github.com/user-attachments/assets/10012472-1955-421a-a105-ec0fa12cfa90)
+
 각 모서리 부분에 가면 어떤 아이템을 가져와야 게임이 끝나는지 알려줍니다.
+At each corner, you’ll find information about which items are needed to finish the game.
 ![image](https://github.com/user-attachments/assets/75357961-2653-43f0-9061-288227742689)
-이동하다보면 또 아이템을 얻을 수 있습니다.
+
+이동하다 보면 또 아이템을 얻을 수 있습니다.
+While moving, you may acquire additional items.
 ![image](https://github.com/user-attachments/assets/4e2426a1-6ab7-4b40-8fb3-7d6685290471)
+
 조합이 불가능한 아이템의 경우 조합할 수 없다고 뜹니다.
+If an item cannot be combined, a message will indicate that it’s not possible.
 ![image](https://github.com/user-attachments/assets/0465f517-2e1f-4561-8718-b730d301aa71)
-이런 경우에는 다른 한 아이템을 버려야하는데 이때 묻기 기능을 씁니다.
+
+이런 경우에는 다른 한 아이템을 버려야 하는데 이때 묻기 기능을 씁니다.
+In this case, you must discard one of the items using the "bury" feature.
 ![image](https://github.com/user-attachments/assets/8095b085-199d-4bb3-8fa9-5a59df4b6a56)
+
 아이템을 버리면 인벤토리 칸에서 아이템이 사라집니다. 버린 아이템은 묻은 위치에 그대로 존재합니다.
+Discarded items disappear from the inventory but remain in the spot where they were buried.
 ![image](https://github.com/user-attachments/assets/a841194e-2793-4a5b-a1db-f2ee4d552d5c)
+
 다시 움직이면서 아이템을 찾습니다.
+Move again to search for more items.
 ![image](https://github.com/user-attachments/assets/64a48d84-91f5-490b-8cf3-a461e82d6625)
-만약 하트가 없으면 초록 존으로 다시 돌아와서 하트를 채워야합니다. 하트는 1턴당 1개씩 찹니다.
+
+만약 하트가 없으면 초록 존으로 다시 돌아와서 하트를 채워야 합니다. 하트는 1턴당 1개씩 찹니다.
+If you run out of hearts, return to the green zone to replenish them. Hearts recover one per turn.
 ![image](https://github.com/user-attachments/assets/af81e5dd-af29-4a68-a1e7-e1477a117d3c)
-계속해서 게임을 플레이하다보면 다른 아이템을 얻고 조합을 해서 조합 아이템을 만들 수 있습니다.
+
+계속해서 게임을 플레이하다 보면 다른 아이템을 얻고 조합을 해서 조합 아이템을 만들 수 있습니다.
+As the game progresses, you can acquire and combine items to create new ones.
 ![image](https://github.com/user-attachments/assets/86e6a3ef-f3ad-4a17-83ef-9260329f4ae5)
+
 이제 가지고 있는 아이템을 가지고 특정 지역으로 가면 게임이 끝났다는 공지가 올라오고 게임이 끝납니다.
+Finally, take the required items to a specific location to receive a notification that the game has ended.
 ![image](https://github.com/user-attachments/assets/e6dd22e7-d083-4c8b-9481-437736836f01)
 
 
