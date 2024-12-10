@@ -47,7 +47,7 @@ This is a **2-4 player board game**, where the player who collects items and esc
 - 자세한 건 개발 일지 참고(readme파일 밑에 있습니다.).  
   Refer to the development log for more details.
   
-![이미지 설명](https://user-images.githubusercontent.com/12345678/sample-image.png)
+[이미지 설명](https://user-images.githubusercontent.com/12345678/sample-image.png)
 
   
 
