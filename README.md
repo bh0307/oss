@@ -115,6 +115,7 @@ create room을 누르면 방을 만들 수 있습니다.
 게임이 시작되면 플레이어는 초록색 존에서 랜덤한 위치에 리스폰 됩니다.
 ![image](https://github.com/user-attachments/assets/2eec3d46-1428-4aa8-8e17-755ce34206f7)
 
+제한시간 내에 무엇을 할지 정하고 검은 색 지역으로 가서 아이템을 찾습니다.
 ![image](https://github.com/user-attachments/assets/bfac0ad3-42f5-4e2d-9de8-e61610178e06)
 
 ![image](https://github.com/user-attachments/assets/c653c262-601b-4863-8fc1-8de833f42520)
