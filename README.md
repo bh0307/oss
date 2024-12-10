@@ -136,11 +136,11 @@ create room을 누르면 방을 만들 수 있습니다.
 ![image](https://github.com/user-attachments/assets/0465f517-2e1f-4561-8718-b730d301aa71)
 이런 경우에는 다른 한 아이템을 버려야하는데 이때 묻기 기능을 씁니다.
 ![image](https://github.com/user-attachments/assets/8095b085-199d-4bb3-8fa9-5a59df4b6a56)
-
+아이템을 버리면 인벤토리 칸에서 아이템이 사라집니다. 버린 아이템은 묻은 위치에 그대로 존재합니다.
 ![image](https://github.com/user-attachments/assets/a841194e-2793-4a5b-a1db-f2ee4d552d5c)
-
+다시 움직이면서 아이템을 찾습니다.
 ![image](https://github.com/user-attachments/assets/64a48d84-91f5-490b-8cf3-a461e82d6625)
-
+만약 하트가 없으면 초록 존으로 다시 돌아와서 하트를 채워야합니다. 하트는 1턴당 1개씩 찹니다.
 ![image](https://github.com/user-attachments/assets/af81e5dd-af29-4a68-a1e7-e1477a117d3c)
 
 ![image](https://github.com/user-attachments/assets/86e6a3ef-f3ad-4a17-83ef-9260329f4ae5)
