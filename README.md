@@ -128,13 +128,13 @@ create room을 누르면 방을 만들 수 있습니다.
 ![image](https://github.com/user-attachments/assets/58415de2-8b0e-4eb3-813c-23c0eb3d3061)
 이동후 아이템을 얻으면 아이템을 얻었다는 공지가 뜨고 오른쪽 인벤토리 칸에 어떤 아이템을 얻었는지 공지가 뜹니다.
 ![image](https://github.com/user-attachments/assets/10012472-1955-421a-a105-ec0fa12cfa90)
-
+각 모서리 부분에 가면 어떤 아이템을 가져와야 게임이 끝나는지 알려줍니다.
 ![image](https://github.com/user-attachments/assets/75357961-2653-43f0-9061-288227742689)
-
+이동하다보면 또 아이템을 얻을 수 있습니다.
 ![image](https://github.com/user-attachments/assets/4e2426a1-6ab7-4b40-8fb3-7d6685290471)
-
+조합이 불가능한 아이템의 경우 조합할 수 없다고 뜹니다.
 ![image](https://github.com/user-attachments/assets/0465f517-2e1f-4561-8718-b730d301aa71)
-
+이런 경우에는 다른 한 아이템을 버려야하는데 이때 묻기 기능을 씁니다.
 ![image](https://github.com/user-attachments/assets/8095b085-199d-4bb3-8fa9-5a59df4b6a56)
 
 ![image](https://github.com/user-attachments/assets/a841194e-2793-4a5b-a1db-f2ee4d552d5c)
@@ -142,9 +142,9 @@ create room을 누르면 방을 만들 수 있습니다.
 ![image](https://github.com/user-attachments/assets/64a48d84-91f5-490b-8cf3-a461e82d6625)
 
 ![image](https://github.com/user-attachments/assets/af81e5dd-af29-4a68-a1e7-e1477a117d3c)
-이제 가지고 있는 아이템을 가지고 특정 지역으로 가면 게임이 끝났다는 공지가 올라오고 게임이 끝납니다.
-![image](https://github.com/user-attachments/assets/86e6a3ef-f3ad-4a17-83ef-9260329f4ae5)
 
+![image](https://github.com/user-attachments/assets/86e6a3ef-f3ad-4a17-83ef-9260329f4ae5)
+이제 가지고 있는 아이템을 가지고 특정 지역으로 가면 게임이 끝났다는 공지가 올라오고 게임이 끝납니다.
 ![image](https://github.com/user-attachments/assets/e6dd22e7-d083-4c8b-9481-437736836f01)
 
 
