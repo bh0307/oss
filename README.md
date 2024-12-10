@@ -46,6 +46,10 @@ This is a **2-4 player board game**, where the player who collects items and esc
   
 - 자세한 건 개발 일지 참고.  
   Refer to the development log for more details.
+  
+### Full Logs
+- For detailed logs, refer to [김병호 개발일지](path_to_uploaded_file/김병호_개발일지.docx).
+
 
 ## 4. 앞으로 더 개발하는 점 / Future Development  
 - AI를 탐재하여 혼자 플레이해도 AI와 같이 게임이 가능하게 만들기  
@@ -79,9 +83,6 @@ This is a **2-4 player board game**, where the player who collects items and esc
 -UiManager.cs: 사용자 인터페이스의 알림 및 업데이트를 관리합니다.
 
 -ItemContainor.cs: 아이템 이미지와 관련된 데이터를 보관합니다.
-
-### Full Logs
-- For detailed logs, refer to [김병호 개발일지](path_to_uploaded_file/김병호_개발일지.docx).
 
 ## 7.🔧 사용 기술
 -Unity: 게임 개발 엔진으로, 2D 및 3D 게임 개발에 사용되었습니다.
