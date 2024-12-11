@@ -111,6 +111,7 @@ This is a **2-4 player board game**, where the player who collects items and esc
 9. 게임 실행 전에 highlight server setting을 누르세요
 10. ![{0786D6E6-B934-409F-A136-10886FFA1E84}](https://github.com/user-attachments/assets/5f49dfd7-4b16-4ff4-aad1-50ce0a6678c0)
 11. app pun에 28964496-d204-45a8-ba35-cf3b78b68e90를 넣으세요
+12. 즐겁게 게임하세요~
 
 
    
