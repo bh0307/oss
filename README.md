@@ -91,8 +91,11 @@ This is a **2-4 player board game**, where the player who collects items and esc
 
 -C#: 게임 로직과 시스템 구현에 사용되었습니다.
 
+## 8. 실행 법!!
 
-## 8 .🚀 시작하기
+
+
+## 9 .🚀 시작하기
 
 게임 시작을 누르면 로비씬으로 이동합니다.
 When you press "Start Game," you will move to the lobby scene.
