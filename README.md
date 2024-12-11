@@ -98,7 +98,22 @@ This is a **2-4 player board game**, where the player who collects items and esc
 -C#: 게임 로직과 시스템 구현에 사용되었습니다.
 
 ## 8. 실행 법!!
+1. zip을 다운하세요
+2. 압축을 푸세요
+3. 유니티 허브를 깔고
+4. 유니티 허브 로그인하세요
+5. editor 버전 최신껄로 다운 받으세요
+6. ![{A288C57D-E38B-4B02-A1A4-F385A0A0AF24}](https://github.com/user-attachments/assets/a73506d7-5e71-41fb-9a5d-46decdff5ac1)
+여기서 add from project disk를 눌러서 campfire 파일을 등록하세요
+7. 그 후 campfire를 누르면 실행이 될겁니다
+8. ![{7FCCDF19-1558-4C22-9F0C-6D71EE1B8FAA}](https://github.com/user-attachments/assets/46264340-3baf-4cd7-a9a5-d789a60cec56)
+여기서 build and run을 누르면 게임이 실행됩니다.
+9. 게임 실행 전에 highlight server setting을 누르세요
+10. ![{0786D6E6-B934-409F-A136-10886FFA1E84}](https://github.com/user-attachments/assets/5f49dfd7-4b16-4ff4-aad1-50ce0a6678c0)
+11. app pun에 28964496-d204-45a8-ba35-cf3b78b68e90를 넣으세요
 
+
+   
 
 
 ## 9 .🚀 시작하기
