@@ -2,6 +2,12 @@
 
 
 
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for more details.
+
+
 ## 1. 게임 소개 / Game Introduction
 🛠️ Unity 기반 멀티플레이어 게임 프로젝트
 이 프로젝트는 Unity와 Photon PUN을 활용하여 멀티플레이어 환경에서 아이템을 획득, 조합, 버리는 기능을 구현한 게임입니다.
